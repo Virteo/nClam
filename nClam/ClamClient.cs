@@ -56,7 +56,7 @@
 #endif
             string result;
 
-            var clam = new TcpClient();
+            var clam = new TcpClient(AddressFamily.InterNetwork);
             try
             {
                 await clam.ConnectAsync(Server, Port).ConfigureAwait(false);
